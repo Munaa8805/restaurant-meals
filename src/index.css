@@ -1,0 +1,14 @@
+:root {
+  --main-background: #fdf2e9;
+  --orange: #e67e22;
+  --dark-orange: #cf711f;
+  --footer-text: #767676;
+  --logos-header: rgb(54, 51, 51);
+  --button-hover: #555;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
