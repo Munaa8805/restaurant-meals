@@ -16,6 +16,16 @@ export const AllrecipeContainer = styled.div`
     color: #000;
     font-size: 2.5rem;
   }
+  @media screen and (max-width: 768px) {
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
 `;
 export const AllrecipeWrapper = styled.div`
   max-width: 1200px;
@@ -45,9 +55,10 @@ export const AllrecipeCard = styled.div`
   cursor: pointer;
   border-radius: 10px;
   &:hover {
-    transform: translateY(-1.2rem);
+    transform: translateY(-1.1rem);
     transition: all 0.3s ease-in-out;
   }
+
   img {
     height: 250px;
     width: 100%;

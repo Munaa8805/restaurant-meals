@@ -90,3 +90,29 @@ export const allRecipeCategories = [
   { id: "08", name: "Low FODMAP" },
   { id: "09", name: "Kid-friendly" }
 ];
+export const priceData = [
+  {
+    id: "01",
+    name: "starter",
+    price: 399,
+    description: "per month. That's just $13 per meal!",
+    descOne: "1 meal per day",
+    descTwo: "Order from 11am to 9pm",
+    descThree: "Delivery is free",
+    descFour: "",
+    bg: true,
+    active: false
+  },
+  {
+    id: "02",
+    name: "complete",
+    price: 649,
+    description: "per month. That's just $11 per meal!",
+    descOne: "2 meals per day",
+    descTwo: "Order 24/7",
+    descThree: "Delivery is free",
+    descFour: "Get access to latest recipes",
+    bg: false,
+    active: true
+  }
+];
