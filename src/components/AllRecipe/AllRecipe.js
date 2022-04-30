@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useHistory } from "react-router-dom";
 import {
   AllrecipeContainer,
   AllrecipeWrapper,
@@ -10,12 +11,17 @@ import {
 } from "./AllRecipeElements";
 import { AllrecipeData, allRecipeCategories } from "../../data";
 const AllRecipe = () => {
+  const history = useHistory();
+
+  const allRecipeHandler = () => {
+    history.push("/meals");
+  };
   return (
     <AllrecipeContainer id="meals">
       <h3>MEALS</h3>
       <h1>Omnifood AI chooses from 5,000+ recipes</h1>
       <AllrecipeWrapper>
-        {AllrecipeData.map(data => (
+        {AllrecipeData.map((data) => (
           <AllrecipeCard key={data.id}>
             <img src={data.image} />
             <CategorySpan>{data.category[0]}</CategorySpan>
@@ -60,7 +66,7 @@ const AllRecipe = () => {
         ))}
         <AllrecipeCard>
           <TitleH3>Works with any diet:</TitleH3>
-          {allRecipeCategories.map(item => (
+          {allRecipeCategories.map((item) => (
             <RecipeCategory>
               <p>
                 <ion-icon
@@ -80,7 +86,7 @@ const AllRecipe = () => {
         </AllrecipeCard>
       </AllrecipeWrapper>
       <DivContainer>
-        <span>See all recipes →</span>
+        <span onClick={allRecipeHandler}>See all recipes →</span>
       </DivContainer>
     </AllrecipeContainer>
   );

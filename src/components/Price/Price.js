@@ -16,12 +16,12 @@ import { priceData } from "../../data";
 const Price = () => {
   return (
     <Fragment>
-      <PriceTitleDescreption>
+      <PriceTitleDescreption id="price">
         <h1>Pricing</h1>
         <p>Eating well without breaking the bank</p>
       </PriceTitleDescreption>
 
-      <PriceContainer id="price">
+      <PriceContainer>
         <PriceWrapper>
           {priceData.map((item) => (
             <PriceCard key={item.id} bg={item.bg} active={item.active}>
@@ -100,7 +100,9 @@ const Price = () => {
                 <PriceContent>{item.descFour}</PriceContent>
               </PriceDiv>
               <BtnWrapper>
-                <Button>Start eating</Button>
+                <Button fontBig primary>
+                  Start eating well
+                </Button>
               </BtnWrapper>
             </PriceCard>
           ))}
