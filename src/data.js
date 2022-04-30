@@ -116,3 +116,41 @@ export const priceData = [
     active: true
   }
 ];
+export const footerData = [
+  {
+    id: "01",
+    title: "About Us",
+    content1: "How it works",
+    content2: "Testimonials",
+    content3: "Careers",
+    content4: "Investors",
+    content5: "Terms of Service"
+  },
+  {
+    id: "02",
+    title: "Contact Us",
+    content1: "Contact",
+    content2: "Support",
+    content3: "Destination",
+    content4: "Sponsorship",
+    content5: ""
+  },
+  {
+    id: "03",
+    title: "Videos",
+    content1: "Submit video",
+    content2: "Ambassadors",
+    content3: "Agency",
+    content4: "Influenceer",
+    content5: ""
+  },
+  {
+    id: "04",
+    title: "Social Media",
+    content1: "Instagram",
+    content2: "Facebook",
+    content3: "Youtube",
+    content4: "Twitter",
+    content5: ""
+  }
+];
