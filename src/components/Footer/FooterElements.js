@@ -10,6 +10,7 @@ export const FooterContainer = styled.footer`
   padding: 20px 0;
 `;
 export const FooterWrap = styled.div`
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
