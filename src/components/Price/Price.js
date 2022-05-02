@@ -11,7 +11,7 @@ import {
   PriceTitleDescreption,
   BtnWrapper
 } from "./PriceElements";
-import { Button } from "../ButtonElement";
+import { Button } from "../Button";
 import { priceData } from "../../data";
 const Price = () => {
   return (
@@ -100,7 +100,11 @@ const Price = () => {
                 <PriceContent>{item.descFour}</PriceContent>
               </PriceDiv>
               <BtnWrapper>
-                <Button fontBig primary>
+                <Button
+                  fontsize="1.2rem"
+                  bgHover="#767676"
+                  colorHover="#e67e22"
+                >
                   Start eating well
                 </Button>
               </BtnWrapper>

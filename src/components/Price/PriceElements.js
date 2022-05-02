@@ -90,4 +90,6 @@ export const PriceContent = styled.p`
   font-size: 1.1rem;
   color: #666;
 `;
-export const BtnWrapper = styled.div``;
+export const BtnWrapper = styled.div`
+  width: 100%;
+`;

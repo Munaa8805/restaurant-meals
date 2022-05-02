@@ -36,32 +36,34 @@ export const ContactDescription = styled.p`
 
 /////
 export const ContactInformationWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-`;
-export const ContactOne = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-right: 2rem;
-  div {
-    width: 100%;
-  }
+  display: block;
 `;
 
+export const Form = styled.form`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+`;
+export const Div = styled.div`
+  width: 100%;
+`;
 export const ContactLabel = styled.label`
   font-size: 1.2rem;
   display: block;
   margin-bottom: 0.5rem;
-  width: 100%;
 `;
 export const ContactInput = styled.input`
   font-size: 1rem;
   display: block;
   margin-bottom: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 0.5rem 0rem;
   width: 100%;
+  border-radius: 10px;
+  border: none;
+  &:active {
+    border: none;
+  }
 `;
 
 export const Select = styled.select`
@@ -69,11 +71,23 @@ export const Select = styled.select`
   display: block;
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
   cursor: pointer;
   width: 100%;
+  &:active {
+    border: none;
+  }
   &: hover {
     cursor: pointer;
+  }
+`;
+
+export const BtnWrapper = styled.div`
+  display: grid;
+  align-items: center;
+  button {
+    align-self: center;
   }
 `;
 
