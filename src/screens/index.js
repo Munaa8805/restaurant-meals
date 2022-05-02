@@ -15,6 +15,7 @@ import AllLogo from "../components/Logos/AllLogo";
 import Testimonials from "../components/Testimonials/Testimonials";
 import AllRecipe from "../components/AllRecipe/AllRecipe";
 import Price from "../components/Price/Price";
+import Contact from "../components/Contact/Contact";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -34,6 +35,7 @@ const Home = () => {
       <Testimonials />
       <Price />
       <Feature />
+      <Contact />
       <Footer />
     </>
   );
