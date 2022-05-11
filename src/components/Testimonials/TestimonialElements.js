@@ -10,7 +10,7 @@ export const TestimonialWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
   padding: 0 60px;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 996px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }

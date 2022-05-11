@@ -18,6 +18,9 @@ export const ContactWrapper = styled.div`
   grid-template-columns: 2fr 1fr;
   overflow: hidden;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const ContactInformation = styled.div`
   display: flex;
@@ -27,11 +30,17 @@ export const ContactInformation = styled.div`
 export const ContactH1 = styled.h1`
   font-size: 3rem;
   font-weight: 700;
+  @media screen and (max-width: 576px) {
+    font-size: 1.5rem;
+  }
 `;
 export const ContactDescription = styled.p`
   font-size: 1.5rem;
   padding-bottom: 2rem;
   line-height: 2rem;
+  @media screen and (max-width: 576px) {
+    font-size: 1.2rem;
+  }
 `;
 
 /////
@@ -44,6 +53,10 @@ export const Form = styled.form`
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  } ;
 `;
 export const Div = styled.div`
   width: 100%;
@@ -100,4 +113,7 @@ export const Image = styled.img`
   height: 100%;
   width: 100%;
   opacity: 0.8;
+  @media screen and (max-width: 768px) {
+    display: none;
+  } ;
 `;

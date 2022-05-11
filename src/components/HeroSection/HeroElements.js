@@ -16,6 +16,7 @@ export const HeroContainer = styled.div`
   @media screen and (max-width: 992px) {
     padding-top: 10px;
     height: 660px;
+    flex-direction: column;
   }
 `;
 export const HeroTextBanner = styled.div`
@@ -31,6 +32,9 @@ export const BtnDiv = styled.div`
 export const HeroContent = styled.div`
   padding-right: 40px;
   padding-left: 40px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const HeroH1 = styled.h1`
@@ -40,8 +44,8 @@ export const HeroH1 = styled.h1`
   @media screen and (max-width: 992px) {
     font-size: 40px;
   }
-  @media screen and (max-widht: 480px) {
-    font-size: 32px;
+  @media screen and (max-widht: 768px) {
+    font-size: 1.5rem;
   }
 `;
 export const HeroP = styled.p`
