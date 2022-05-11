@@ -72,7 +72,7 @@ const Contact = () => {
           </ContactInformationWrapper>
         </ContactInformation>
         <ImageContainer>
-          <Image src={ContactImage} />
+          <Image src={ContactImage} alt="women eating" />
         </ImageContainer>
       </ContactWrapper>
     </ContactContainer>

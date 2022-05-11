@@ -59,7 +59,7 @@ const InfoSection = ({
             </Column1>
             <Column2>
               <ImgWrap imgCenter={imgCenter}>
-                <Img src={img} alt={alt} />
+                <Img src={img} alt="image" />
               </ImgWrap>
             </Column2>
           </InfoRow>
