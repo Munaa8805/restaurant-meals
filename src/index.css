@@ -6,9 +6,3 @@
   --logos-header: rgb(54, 51, 51);
   --button-hover: #555;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
