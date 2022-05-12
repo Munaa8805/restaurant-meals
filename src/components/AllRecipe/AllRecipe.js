@@ -17,7 +17,7 @@ const AllRecipe = () => {
     history.push("/meals");
   };
   return (
-    <AllrecipeContainer id="meals">
+    <AllrecipeContainer id="meals" to="/meals">
       <h3>MEALS</h3>
       <h1>Omnifood AI chooses from 5,000+ recipes</h1>
       <AllrecipeWrapper>
