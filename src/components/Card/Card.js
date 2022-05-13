@@ -20,7 +20,7 @@ const Card = (props) => {
               <span>Publisher :</span> {props.task.publisher}
             </li>
             <li>
-              <span>Recipe :</span> {props.task.recipe_id}
+              <span>RecipeID :</span> {props.task.recipe_id}
             </li>
             <li>
               <span>Social Rank :</span> {props.task.social_rank.toFixed(0)}
