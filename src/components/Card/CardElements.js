@@ -26,7 +26,7 @@ export const ContainerImage = styled.div`
 export const ContainerContent = styled.div`
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 300px;
   justify-content: space-between;
   width: 100%;
   padding: 1rem;

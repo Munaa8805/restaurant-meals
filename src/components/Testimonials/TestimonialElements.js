@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TestimonialContainer = styled.div`
   background: #fdf2e9;
   width: 100%;
+  padding: 2rem 0;
 `;
 export const TestimonialWrapper = styled.div`
   display: grid;
@@ -22,6 +23,7 @@ export const TestimonialWrap = styled.div`
 export const TitleH1 = styled.h1`
   color: #e67e22;
   font-size: 2rem;
+  margin-bottom: 1rem;
   @media screen and (max-width: 960px) {
     text-align: center;
   }
@@ -29,6 +31,7 @@ export const TitleH1 = styled.h1`
 export const TitleH3 = styled.h3`
   color: #767676;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
   @media screen and (max-width: 960px) {
     text-align: center;
   }

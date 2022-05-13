@@ -30,6 +30,7 @@ export const ContactInformation = styled.div`
 export const ContactH1 = styled.h1`
   font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 2rem;
   @media screen and (max-width: 576px) {
     font-size: 1.5rem;
   }
@@ -52,7 +53,7 @@ export const Form = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
-  row-gap: 2.4rem;
+  row-gap: 2rem;
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1rem;

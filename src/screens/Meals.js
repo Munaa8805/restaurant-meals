@@ -5,6 +5,7 @@ import { Button } from "../components/Button";
 import useHttp from "../hooks/use-http";
 import { Container } from "../components/Container";
 import Card from "../components/Card/Card";
+import LoadingSpinner from "../components/Spinner/LoadingSpinner";
 const Meals = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [tasks, setTasks] = useState([]);
@@ -22,6 +23,24 @@ const Meals = () => {
     );
   }, [fetchTasks]);
 
+  let content;
+  if (isLoading) {
+    content = (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh"
+        }}
+      >
+        <LoadingSpinner />
+      </div>
+    );
+  } else {
+    content = tasks.map((task) => <Card task={task} />);
+  }
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -30,11 +49,7 @@ const Meals = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Container mt="80px">
-        {tasks.map((task) => (
-          <Card task={task} />
-        ))}
-      </Container>
+      <Container mt="80px">{content}</Container>
     </>
   );
 };

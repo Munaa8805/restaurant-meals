@@ -15,7 +15,7 @@ export const PriceTitleDescreption = styled.div`
     font-weight: bold;
     margin-top: 0;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     padding-left: 1rem;
     p {
       font-size: 2rem;
@@ -71,6 +71,7 @@ export const PriceDesc = styled.p`
   color: #999;
   font-size: 1rem;
   font-weight: 400;
+  margin-bottom: 1rem;
 `;
 export const PricePrice = styled.h1`
   color: #333;
@@ -78,12 +79,13 @@ export const PricePrice = styled.h1`
   margin: 0;
   font-weight: 700;
 `;
-export const PriceDiv = styled.div`
+export const PriceDiv = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  margin-bottom: 1rem;
 `;
 
 export const PriceContent = styled.p`
