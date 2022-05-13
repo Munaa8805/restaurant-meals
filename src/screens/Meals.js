@@ -6,9 +6,12 @@ import useHttp from "../hooks/use-http";
 import { Container } from "../components/Container";
 import Card from "../components/Card/Card";
 import LoadingSpinner from "../components/Spinner/LoadingSpinner";
+import Search from "../components/Search/Search";
 const Meals = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [tasks, setTasks] = useState([]);
+  const [query, setQuery] = useState("pizza");
+  console.log("query", query);
 
   const { isLoading, error, sendRequest: fetchTasks } = useHttp();
   useEffect(() => {
@@ -17,12 +20,14 @@ const Meals = () => {
     };
     fetchTasks(
       {
-        url: "https://forkify-api.herokuapp.com/api/search?q=pizza"
+        url: `https://forkify-api.herokuapp.com/api/search?q=${query}`
       },
       transformTasks
     );
-  }, [fetchTasks]);
-
+  }, [fetchTasks, query]);
+  const queryFunction = (q) => {
+    setQuery(q);
+  };
   let content;
   if (isLoading) {
     content = (
@@ -49,7 +54,10 @@ const Meals = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Container mt="80px">{content}</Container>
+      <Container mt="80px">
+        <Search getQuery={queryFunction} />
+        {content}
+      </Container>
     </>
   );
 };

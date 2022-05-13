@@ -18,7 +18,7 @@ export const CardContainer = styled.article`
 `;
 export const ContainerImage = styled.div`
   img {
-    height: 250px;
+    height: 200px;
     width: 100%;
   }
 `;
@@ -30,6 +30,9 @@ export const ContainerContent = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 1rem;
+  @media screen and (max-width: 540px) {
+    height: 100%;
+  }
 `;
 export const Content = styled.div`
   display: flex;
