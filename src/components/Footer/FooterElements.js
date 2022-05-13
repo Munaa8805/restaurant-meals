@@ -8,6 +8,9 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   padding: 20px 0;
+  @media screen and (max-width: 992px) {
+    padding: 0 1rem;
+  }
 `;
 export const FooterWrap = styled.div`
   width: 100%;
@@ -18,10 +21,10 @@ export const FooterWrap = styled.div`
   justify-content: space-between;
   grid-gap: 1rem;
   // padding: 0 50px;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 992px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }

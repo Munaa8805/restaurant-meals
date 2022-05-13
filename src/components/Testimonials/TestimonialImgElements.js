@@ -10,4 +10,12 @@ export const MealImg = styled.img`
   &:hover {
     transform: scale(1.05);
   }
+  @media screen and (max-width: 1500px) {
+    height: 150px;
+    width: 150px;
+  }
+  @media screen and (max-width: 1200px) {
+    height: 100px;
+    width: 100px;
+  }
 `;

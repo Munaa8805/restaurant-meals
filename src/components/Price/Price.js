@@ -41,64 +41,72 @@ const Price = () => {
                 {item.price}
               </PricePrice>
               <PriceDesc>{item.description}</PriceDesc>
-              <PriceDiv>
-                <ion-icon
-                  style={{
-                    height: "2rem",
-                    width: "2rem",
-                    color: "#e67e22",
-                    marginRight: "1.5rem"
-                  }}
-                  name={
-                    item.descOne.length ? "checkmark-outline" : "close-outline"
-                  }
-                ></ion-icon>
-                <PriceContent>{item.descOne}</PriceContent>
-              </PriceDiv>
-              <PriceDiv>
-                <ion-icon
-                  style={{
-                    height: "2rem",
-                    width: "2rem",
-                    color: "#e67e22",
-                    marginRight: "1.5rem"
-                  }}
-                  name={
-                    item.descTwo.length ? "checkmark-outline" : "close-outline"
-                  }
-                ></ion-icon>
-                <PriceContent>{item.descTwo}</PriceContent>
-              </PriceDiv>
-              <PriceDiv>
-                <ion-icon
-                  style={{
-                    height: "2rem",
-                    width: "2rem",
-                    color: "#e67e22",
-                    marginRight: "1.5rem"
-                  }}
-                  name={
-                    item.descThree.length
-                      ? "checkmark-outline"
-                      : "close-outline"
-                  }
-                ></ion-icon>
-                <PriceContent>{item.descThree}</PriceContent>
-              </PriceDiv>
-              <PriceDiv>
-                <ion-icon
-                  style={{
-                    height: "2rem",
-                    width: "2rem",
-                    color: "#e67e22",
-                    marginRight: "1.5rem"
-                  }}
-                  name={
-                    item.descFour.length ? "checkmark-outline" : "close-outline"
-                  }
-                ></ion-icon>
-                <PriceContent>{item.descFour}</PriceContent>
-              </PriceDiv>
+              <ul>
+                <PriceDiv>
+                  <ion-icon
+                    style={{
+                      height: "2rem",
+                      width: "2rem",
+                      color: "#e67e22",
+                      marginRight: "1.5rem"
+                    }}
+                    name={
+                      item.descOne.length
+                        ? "checkmark-outline"
+                        : "close-outline"
+                    }
+                  ></ion-icon>
+                  <PriceContent>{item.descOne}</PriceContent>
+                </PriceDiv>
+                <PriceDiv>
+                  <ion-icon
+                    style={{
+                      height: "2rem",
+                      width: "2rem",
+                      color: "#e67e22",
+                      marginRight: "1.5rem"
+                    }}
+                    name={
+                      item.descTwo.length
+                        ? "checkmark-outline"
+                        : "close-outline"
+                    }
+                  ></ion-icon>
+                  <PriceContent>{item.descTwo}</PriceContent>
+                </PriceDiv>
+                <PriceDiv>
+                  <ion-icon
+                    style={{
+                      height: "2rem",
+                      width: "2rem",
+                      color: "#e67e22",
+                      marginRight: "1.5rem"
+                    }}
+                    name={
+                      item.descThree.length
+                        ? "checkmark-outline"
+                        : "close-outline"
+                    }
+                  ></ion-icon>
+                  <PriceContent>{item.descThree}</PriceContent>
+                </PriceDiv>
+                <PriceDiv>
+                  <ion-icon
+                    style={{
+                      height: "2rem",
+                      width: "2rem",
+                      color: "#e67e22",
+                      marginRight: "1.5rem"
+                    }}
+                    name={
+                      item.descFour.length
+                        ? "checkmark-outline"
+                        : "close-outline"
+                    }
+                  ></ion-icon>
+                  <PriceContent>{item.descFour}</PriceContent>
+                </PriceDiv>
+              </ul>
               <BtnWrapper>
                 <Button
                   fontsize="1.2rem"

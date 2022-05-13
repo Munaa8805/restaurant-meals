@@ -5,8 +5,8 @@ export const AllrecipeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
-  padding-top: 50px;
+  padding-bottom: 4rem;
+  padding-top: 3rem;
   background: #d9d9d9;
   h3 {
     color: #e67e22;
@@ -15,6 +15,12 @@ export const AllrecipeContainer = styled.div`
   h1 {
     color: #000;
     font-size: 2.5rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+  @media screen and (max-width: 992px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   @media screen and (max-width: 768px) {
     h3 {
@@ -29,11 +35,12 @@ export const AllrecipeContainer = styled.div`
 `;
 export const AllrecipeWrapper = styled.div`
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr 1fr;
@@ -55,7 +62,7 @@ export const AllrecipeCard = styled.div`
   cursor: pointer;
   border-radius: 10px;
   &:hover {
-    transform: translateY(-1.1rem);
+    transform: translateY(-1.05rem);
     transition: all 0.3s ease-in-out;
   }
 
@@ -68,12 +75,14 @@ export const AllrecipeCard = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 1rem;
     font-size: 1rem;
+    margin-bottom: 1rem;
   }
   h1 {
     font-size: 1.8rem;
-    padding-left: 50px;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
   }
 `;
 export const CategorySpan = styled.span`
@@ -99,6 +108,7 @@ export const RecipeCategory = styled.div`
 export const TitleH3 = styled.h3`
   font-size: 1.5rem;
   text-align: center;
+  margin: 1rem 0;
 `;
 export const DivContainer = styled.div`
   margin-top: 60px;
