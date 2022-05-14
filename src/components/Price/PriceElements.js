@@ -21,6 +21,12 @@ export const PriceTitleDescreption = styled.div`
       font-size: 2rem;
     }
   }
+  @media screen and (max-width: 576px) {
+    p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
 `;
 export const PriceContainer = styled.div`
   display: flex;
@@ -38,6 +44,11 @@ export const PriceWrapper = styled.div`
   grid-column-gap: 4rem;
   // background: #00ff00;
   @media screen and (max-width: 768px) {
+    grid-column-gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media screen and (max-width: 576px) {
     grid-template-columns: 1fr;
   }
 `;

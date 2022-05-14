@@ -41,11 +41,14 @@ export const AllrecipeWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 2rem;
+  @media screen and (max-width: 1300px) {
+    padding: 0 1rem;
+  }
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 996px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -84,6 +87,11 @@ export const AllrecipeCard = styled.div`
     padding-left: 1rem;
     margin-bottom: 1rem;
   }
+  @media screen and (max-width: 992px) {
+    h3 {
+      margin-top: 2rem;
+    }
+  }
 `;
 export const CategorySpan = styled.span`
   font-size: 1rem;
@@ -109,6 +117,9 @@ export const TitleH3 = styled.h3`
   font-size: 1.5rem;
   text-align: center;
   margin: 1rem 0;
+  @media screen and (max-width: 992px) {
+    font-size: 1rem;
+  }
 `;
 export const DivContainer = styled.div`
   margin-top: 60px;

@@ -11,7 +11,7 @@ export const TestimonialWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
   padding: 0 60px;
-  @media screen and (max-width: 996px) {
+  @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
@@ -24,15 +24,15 @@ export const TitleH1 = styled.h1`
   color: #e67e22;
   font-size: 2rem;
   margin-bottom: 1rem;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 992px) {
     text-align: center;
   }
 `;
 export const TitleH3 = styled.h3`
   color: #767676;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  @media screen and (max-width: 960px) {
+  margin-bottom: 2rem;
+  @media screen and (max-width: 992px) {
     text-align: center;
   }
 `;
@@ -42,7 +42,7 @@ export const VisitersWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
@@ -51,4 +51,5 @@ export const MealPictureWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  justify-content: center;
 `;
