@@ -14,6 +14,7 @@ import {
 import { ErrorContainer } from "../Error";
 import useInput from "../../hooks/loginhook";
 import { useHistory } from "react-router-dom";
+import { LogoMain } from "../../data";
 
 const SignIn = () => {
   const history = useHistory();
@@ -58,7 +59,9 @@ const SignIn = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/">Omnifood</Icon>
+          <Icon to="/">
+            <img src={LogoMain[0].image} alt="main logo" />
+          </Icon>
           <FormContent>
             <Form onSubmit={formSubmissionHandler}>
               <FormH1>Sign in to your account </FormH1>

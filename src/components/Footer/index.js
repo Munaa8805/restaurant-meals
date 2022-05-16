@@ -21,8 +21,7 @@ import {
   FaTwitter,
   FaLinkedin
 } from "react-icons/fa";
-import Logo from "../../assets/omnifood-logo.png";
-import { footerData } from "../../data";
+import { LogoMain, footerData } from "../../data";
 
 const Footer = () => {
   const toggleHome = () => {
@@ -45,7 +44,7 @@ const Footer = () => {
       <SocialMedia>
         <SocialMediaWrap>
           <SocialLogo to="/" onClick={toggleHome}>
-            <Img src={Logo} alt="main logo" />
+            <Img src={LogoMain[0].image} alt="main logo" />
           </SocialLogo>
           <WebsiteRights> @2022 All rights reserved.</WebsiteRights>
           <SocialIcons>

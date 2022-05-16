@@ -12,7 +12,7 @@ import {
   BtnDiv
 } from "./HeroElements";
 import { Button } from "../ButtonElement";
-import BannerImg from "../../assets/hero-min.png";
+import BannerImg from "../../assets/hero-min.webp";
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const onHover = () => {

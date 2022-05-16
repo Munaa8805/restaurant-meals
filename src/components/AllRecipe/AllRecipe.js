@@ -16,6 +16,12 @@ const AllRecipe = () => {
   const allRecipeHandler = () => {
     history.push("/meals");
   };
+  // let ingredients = [];
+
+  // for (const ingredient of AllrecipeData.category) {
+  //   ingredients.push(<CategorySpan>{ingredient}</CategorySpan>);
+  // }
+  // console.log("ingredients", ingredients);
   return (
     <AllrecipeContainer id="meals" to="/meals">
       <h3>MEALS</h3>
@@ -23,8 +29,13 @@ const AllRecipe = () => {
       <AllrecipeWrapper>
         {AllrecipeData.map((data) => (
           <AllrecipeCard key={data.id}>
-            <img src={data.image} />
-            <CategorySpan>{data.category[0]}</CategorySpan>
+            <img src={data.image} alt="meal" />
+            {/* {ingredients} */}
+            <CategorySpan>
+              {data.category.map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
+            </CategorySpan>
             <h1>{data.title}</h1>
             <p>
               <ion-icon
@@ -66,8 +77,8 @@ const AllRecipe = () => {
         ))}
         <AllrecipeCard>
           <TitleH3>Works with any diet:</TitleH3>
-          {allRecipeCategories.map((item) => (
-            <RecipeCategory>
+          {allRecipeCategories.map((item, index) => (
+            <RecipeCategory key={index}>
               <p>
                 <ion-icon
                   style={{

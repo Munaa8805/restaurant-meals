@@ -28,6 +28,9 @@ export const Icon = styled(Link)`
   color: #fff;
   font-weight: 700;
   font-size: 32px;
+  img {
+    height: 20px;
+  }
   @media screen and (max-width: 480px) {
     margin-left: 16px;
     margin-top: 8px;
@@ -90,4 +93,5 @@ export const Text = styled.span`
   margin-top: 24px;
   color: #fff;
   font-size: 14px;
+  cursor: pointer;
 `;

@@ -16,7 +16,7 @@ import { testimonial_data, meals_picture } from "../../data";
 const Testimonials = () => {
   const [testimonial, setTestimonial] = useState([]);
   const [state, dispatch] = useReducer(testimonialReducer);
-  console.log("state testimonial", state);
+  // console.log("state testimonial", state);
 
   useEffect(() => {
     setTestimonial(testimonial_data);
@@ -31,15 +31,15 @@ const Testimonials = () => {
           <TitleH1>Testimonials</TitleH1>
           <TitleH3>Once you try it, you can't go back</TitleH3>
           <VisitersWrapper>
-            {testimonial.map(data => (
+            {testimonial.map((data) => (
               <TestimonialCard data={data} key={data.id} />
             ))}
           </VisitersWrapper>
         </TestimonialWrap>
         <TestimonialWrap>
           <MealPictureWrapper>
-            {meals_picture.map(data => (
-              <TestimonialImg img={data.image} />
+            {meals_picture.map((data) => (
+              <TestimonialImg img={data.image} key={data.id} />
             ))}
           </MealPictureWrapper>
         </TestimonialWrap>
