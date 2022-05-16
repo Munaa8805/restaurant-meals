@@ -93,13 +93,18 @@ export const AllrecipeCard = styled.div`
     }
   }
 `;
-export const CategorySpan = styled.span`
-  font-size: 1rem;
-  color: #fff;
-  background: green;
-  border-radius: 10px;
-  padding: 5px 10px;
-  padding-left: 50px;
+export const CategorySpan = styled.div`
+  display: flex;
+  padding-left: 1rem;
+  span {
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background: green;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 1rem;
+  }
 `;
 
 export const RecipeCategory = styled.div`

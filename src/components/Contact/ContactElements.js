@@ -71,7 +71,7 @@ export const ContactInput = styled.input`
   font-size: 1rem;
   display: block;
   margin-bottom: 2rem;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
   width: 100%;
   border-radius: 10px;
   border: none;

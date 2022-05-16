@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "../../assets/logos/techcrunch.png";
-import img2 from "../../assets/logos/business-insider.png";
-import img3 from "../../assets/logos/the-new-york-times.png";
-import img4 from "../../assets/logos/forbes.png";
-import img5 from "../../assets/logos/usa-today.png";
+import img1 from "../../assets/logos/techcrunch.webp";
+import img2 from "../../assets/logos/business-insider.webp";
+import img3 from "../../assets/logos/the-new-york-times.webp";
+import img4 from "../../assets/logos/forbes.webp";
+import img5 from "../../assets/logos/usa-today.webp";
 import {
   LogosContainer,
   LogoH2,

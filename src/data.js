@@ -1,17 +1,24 @@
-import img1 from "./assets/gallery/gallery-1.jpg";
-import img2 from "./assets/gallery/gallery-2.jpg";
-import img3 from "./assets/gallery/gallery-3.jpg";
-import img4 from "./assets/gallery/gallery-4.jpg";
-import img5 from "./assets/gallery/gallery-5.jpg";
-import img6 from "./assets/gallery/gallery-6.jpg";
-import img7 from "./assets/gallery/gallery-7.jpg";
-import img8 from "./assets/gallery/gallery-8.jpg";
-import img9 from "./assets/gallery/gallery-9.jpg";
-import img10 from "./assets/gallery/gallery-10.jpg";
-import img11 from "./assets/gallery/gallery-11.jpg";
-import img12 from "./assets/gallery/gallery-12.jpg";
-import allrecipe1 from "./assets/meals/meal-1.jpg";
-import allrecipe2 from "./assets/meals/meal-2.jpg";
+import img1 from "./assets/gallery/gallery-1.webp";
+import img2 from "./assets/gallery/gallery-2.webp";
+import img3 from "./assets/gallery/gallery-3.webp";
+import img4 from "./assets/gallery/gallery-4.webp";
+import img5 from "./assets/gallery/gallery-5.webp";
+import img6 from "./assets/gallery/gallery-6.webp";
+import img7 from "./assets/gallery/gallery-7.webp";
+import img8 from "./assets/gallery/gallery-8.webp";
+import img9 from "./assets/gallery/gallery-9.webp";
+import img10 from "./assets/gallery/gallery-10.webp";
+import img11 from "./assets/gallery/gallery-11.webp";
+import img12 from "./assets/gallery/gallery-12.webp";
+import allrecipe1 from "./assets/meals/meal-1.webp";
+import allrecipe2 from "./assets/meals/meal-2.webp";
+import Logo from "./assets/omnifood-logo.webp";
+
+
+
+
+
+export const LogoMain = [{ id: 1, image: Logo }];
 
 export const testimonial_data = [
   {

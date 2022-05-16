@@ -14,7 +14,8 @@ import {
   NavBtnLink,
   Img
 } from "./NavbarElements";
-import Logo from "../../assets/omnifood-logo.png";
+
+import { LogoMain } from "../../data";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -31,13 +32,14 @@ const Navbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
+
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              <Img src={Logo} alt="main logo" />
+              <Img src={LogoMain[0].image} alt="main logo" />
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars color="#e67e22" />

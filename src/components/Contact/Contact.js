@@ -34,7 +34,7 @@ const Contact = () => {
                 <ContactLabel>Full Name</ContactLabel>
                 <ContactInput
                   type="text"
-                  placeholder=" Your name"
+                  placeholder="Your name"
                   required
                 ></ContactInput>
               </Div>
@@ -43,7 +43,7 @@ const Contact = () => {
                 <ContactLabel>Email address</ContactLabel>
                 <ContactInput
                   type="email"
-                  placeholder=" example@example.com"
+                  placeholder="example@example.com"
                   required
                 ></ContactInput>
               </Div>
@@ -65,7 +65,7 @@ const Contact = () => {
                   bgHover="#fff"
                   colorHover="#e67e22"
                 >
-                  Sign Up
+                  Meal survey
                 </Button>
               </BtnWrapper>
             </Form>
