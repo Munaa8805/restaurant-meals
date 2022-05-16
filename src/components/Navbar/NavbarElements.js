@@ -81,6 +81,7 @@ export const NavLinks = styled(LinkS)`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -90,6 +91,7 @@ export const NavBtnLink = styled(LinkR)`
   background: #e67e22;
   white-space: nowrap;
   padding: 10px 22px;
+  margin-right: ${(props) => props.mr || "0px"};
   color: #fff;
   font-size: 1rem;
   outline: none;
