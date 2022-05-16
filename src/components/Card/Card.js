@@ -10,7 +10,7 @@ const Card = (props) => {
   return (
     <CardContainer>
       <ContainerImage>
-        <img src={props.task.image_url} />
+        <img src={props.task.image_url} alt={props.task.title} />
       </ContainerImage>
       <ContainerContent>
         <Content>

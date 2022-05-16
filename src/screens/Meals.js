@@ -43,7 +43,7 @@ const Meals = () => {
       </div>
     );
   } else {
-    content = tasks.map((task) => <Card task={task} />);
+    content = tasks.map((task, index) => <Card task={task} key={index} />);
   }
 
   const toggle = () => {

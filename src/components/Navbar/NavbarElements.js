@@ -105,4 +105,5 @@ export const NavBtnLink = styled(LinkR)`
 `;
 export const Img = styled.img`
   height: 20px;
+  width: 100%;
 `;

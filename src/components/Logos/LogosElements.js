@@ -28,6 +28,7 @@ export const LogoWrapper = styled.div`
 `;
 export const LogoImg = styled.img`
   height: 30px;
+  width: 150px;
   margin: 10px 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
