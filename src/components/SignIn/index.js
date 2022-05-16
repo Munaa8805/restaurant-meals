@@ -1,6 +1,6 @@
 import React from "react";
+import { Container, Icon } from "./SignInElements";
 import {
-  Container,
   FormWrap,
   FormContent,
   FormLabel,
@@ -8,9 +8,8 @@ import {
   FormButton,
   Text,
   FormH1,
-  Form,
-  Icon
-} from "./SignInElements";
+  Form
+} from "../FormElements";
 import { ErrorContainer } from "../Error";
 import useInput from "../../hooks/loginhook";
 import { useHistory } from "react-router-dom";
