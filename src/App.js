@@ -20,7 +20,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/signin" exact component={SignInPage} />
         <Route path="/meals" exact component={Meals} />
-        <Route path="/signup" component={SignUp} />
+        <Route path="/signup" exact component={SignUp} />
         <Route path="*" component={() => <Redirect to="/" />} />
       </Switch>
     </Suspense>
