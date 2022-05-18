@@ -10,6 +10,7 @@ import {
   DivContainer
 } from "./AllRecipeElements";
 import { AllrecipeData, allRecipeCategories } from "../../data";
+
 const AllRecipe = () => {
   const history = useHistory();
 
