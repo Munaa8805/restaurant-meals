@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { AuthContainer, Section, Formdiv, Actiondiv } from "./AuthFormElements";
 import { Link } from "react-router-dom";
+import AuthContext from "../../context/auth-context";
 const AuthForm = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const authCtx = useContext(AuthContext);
+
+  console.log("authCtx", authCtx);
+
   const switchAuthModeHandler = () => {
-    setIsLogin((prevState) => !prevState);
+    authCtx.toggleIsloggin();
   };
   return (
     <AuthContainer>
       <Section>
-        <h1>{isLogin ? "Login" : "Sign Up"}</h1>
+        <h1>{authCtx.isLogin ? "Login" : "Sign Up"}</h1>
         <form>
           <Formdiv>
             <label htmlFor="email">Your Email</label>
@@ -20,13 +24,17 @@ const AuthForm = () => {
             <input type="password" id="password" required />
           </Formdiv>
           <Actiondiv>
-            <button>{isLogin ? "Login" : "Create Account"}</button>
+            <button>{authCtx.isLogin ? "Login" : "Create Account"}</button>
             <button type="button" onClick={switchAuthModeHandler}>
-              {isLogin ? "Create new account" : "Login with existing account"}
+              {authCtx.isLogin
+                ? "Create new account"
+                : "Login with existing account"}
             </button>
           </Actiondiv>
           <Formdiv>
-            <Link to="/reset-password">{isLogin ? "Forget password" : ""}</Link>
+            <Link to="/reset-password">
+              {authCtx.isLogin ? "Forget password" : ""}
+            </Link>
           </Formdiv>
         </form>
       </Section>
