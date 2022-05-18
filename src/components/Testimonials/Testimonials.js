@@ -16,7 +16,6 @@ import { testimonial_data, meals_picture } from "../../data";
 const Testimonials = () => {
   const [testimonial, setTestimonial] = useState([]);
   const [state, dispatch] = useReducer(testimonialReducer);
-  // console.log("state testimonial", state);
 
   useEffect(() => {
     setTestimonial(testimonial_data);

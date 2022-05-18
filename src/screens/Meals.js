@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/SideBar";
-import { Button } from "../components/Button";
 import useHttp from "../hooks/use-http";
 import { Container } from "../components/Container";
 import Card from "../components/Card/Card";
@@ -11,7 +10,6 @@ const Meals = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [query, setQuery] = useState("pizza");
-  console.log("query", query);
 
   const { isLoading, error, sendRequest: fetchTasks } = useHttp();
   useEffect(() => {
@@ -49,7 +47,7 @@ const Meals = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-  console.log("tasks", tasks);
+
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />

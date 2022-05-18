@@ -6,7 +6,10 @@ const Home = React.lazy(() => import("./screens/index"));
 const SignInPage = React.lazy(() => import("./screens/signin"));
 const Meals = React.lazy(() => import("./screens/Meals"));
 const SignUp = React.lazy(() => import("./screens/SignUp"));
-
+const Authpage = React.lazy(() => import("./screens/Authpage"));
+const ForgetPasswordpage = React.lazy(() =>
+  import("./screens/Forgetpasswordpage")
+);
 function App() {
   return (
     <Suspense
@@ -21,6 +24,8 @@ function App() {
         <Route path="/signin" exact component={SignInPage} />
         <Route path="/meals" exact component={Meals} />
         <Route path="/signup" exact component={SignUp} />
+        <Route path="/auth" exact component={Authpage} />
+        <Route path="/reset-password" exact component={ForgetPasswordpage} />
         <Route path="*" component={() => <Redirect to="/" />} />
       </Switch>
     </Suspense>
