@@ -8,21 +8,21 @@ import LoadingSpinner from "../components/Spinner/LoadingSpinner";
 import Search from "../components/Search/Search";
 const Meals = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [datas, setDatas] = useState([]);
   const [query, setQuery] = useState("pizza");
 
-  const { isLoading, error, sendRequest: fetchTasks } = useHttp();
+  const { isLoading, error, sendRequest: fetchDatas } = useHttp();
   useEffect(() => {
-    const transformTasks = (tasksObj) => {
-      setTasks(tasksObj.recipes);
+    const transformDatas = (datasObj) => {
+      setDatas(datasObj.recipes);
     };
-    fetchTasks(
+    fetchDatas(
       {
         url: `https://forkify-api.herokuapp.com/api/search?q=${query}`
       },
-      transformTasks
+      transformDatas
     );
-  }, [fetchTasks, query]);
+  }, [fetchDatas, query]);
   const queryFunction = (q) => {
     setQuery(q);
   };
@@ -41,7 +41,7 @@ const Meals = () => {
       </div>
     );
   } else {
-    content = tasks.map((task, index) => <Card task={task} key={index} />);
+    content = datas.map((data, index) => <Card data={data} key={index} />);
   }
 
   const toggle = () => {
