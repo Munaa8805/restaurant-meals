@@ -1,12 +1,35 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
+import { useHistory } from "react-router-dom";
 import { AuthContainer, Section, Formdiv, Actiondiv } from "./AuthFormElements";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth-context";
 const AuthForm = () => {
+  const [error, setError] = useState(null);
+  const history = useHistory();
+  const emailInputRef = useRef();
+  const passwordInputRef = useRef();
   const authCtx = useContext(AuthContext);
 
   console.log("authCtx", authCtx);
 
+  const registerSubmit = (e) => {
+    e.preventDefault();
+    const enteredEmail = emailInputRef.current.value;
+    const enteredPassword = passwordInputRef.current.value;
+    if (!enteredEmail.includes("@") || enteredPassword.length < 6) {
+      setError("Something wrong!.");
+      return;
+    }
+    if (!authCtx.isLogin) {
+      authCtx.useRegister(enteredEmail, enteredPassword);
+    } else {
+      authCtx.login(enteredEmail, enteredPassword);
+    }
+
+    // console.log("email", enteredEmail);
+    // console.log("password", enteredPassword);
+    history.push("/");
+  };
   const switchAuthModeHandler = () => {
     authCtx.toggleIsloggin();
   };
@@ -14,14 +37,23 @@ const AuthForm = () => {
     <AuthContainer>
       <Section>
         <h1>{authCtx.isLogin ? "Login" : "Sign Up"}</h1>
-        <form>
+        <form onSubmit={registerSubmit}>
+          {error && (
+            <p style={{ textAlign: "center", color: "red" }}>Something wrong</p>
+          )}
           <Formdiv>
             <label htmlFor="email">Your Email</label>
-            <input type="email" id="email" required />
+            <input type="email" id="email" required ref={emailInputRef} />
           </Formdiv>
           <Formdiv>
             <label htmlFor="password">Your Password</label>
-            <input type="password" id="password" required />
+            <input
+              type="password"
+              id="password"
+              minLength={6}
+              required
+              ref={passwordInputRef}
+            />
           </Formdiv>
           <Actiondiv>
             <button>{authCtx.isLogin ? "Login" : "Create Account"}</button>

@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+
+import { LogoMain } from "../../data";
+import AuthContext from "../../context/auth-context";
+
 import {
   Nav,
   NavbarContainer,
@@ -15,9 +20,17 @@ import {
   Img
 } from "./NavbarElements";
 
-import { LogoMain } from "../../data";
-
+////
 const Navbar = ({ toggle }) => {
+  const authCtx = useContext(AuthContext);
+  const isLogin = authCtx.isLogin;
+  const history = useHistory();
+
+  const logoutHandler = () => {
+    authCtx.logout();
+    history.push("/");
+  };
+
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -93,11 +106,16 @@ const Navbar = ({ toggle }) => {
                   Price
                 </NavLinks>
               </NavItem>
-              <NavBtn>
+              {!isLogin && (
                 <NavBtn>
                   <NavBtnLink to="/auth">Account</NavBtnLink>
                 </NavBtn>
-              </NavBtn>
+              )}
+              {isLogin && (
+                <NavBtn>
+                  <button onClick={logoutHandler}>Logout</button>
+                </NavBtn>
+              )}
             </NavMenu>
           </NavbarContainer>
         </Nav>
