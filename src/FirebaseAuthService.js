@@ -11,7 +11,6 @@ const loginUser = (email, password) => {
 };
 
 const logoutUser = () => {
-  console.log("logout auth=contenxt");
   return auth.signOut();
 };
 

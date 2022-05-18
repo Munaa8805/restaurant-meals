@@ -10,25 +10,25 @@ const Card = (props) => {
   return (
     <CardContainer>
       <ContainerImage>
-        <img src={props.task.image_url} alt={props.task.title} />
+        <img src={props.data.image_url} alt={props.data.title} />
       </ContainerImage>
       <ContainerContent>
         <Content>
-          <h3>{props.task.title}</h3>
+          <h3>{props.data.title}</h3>
           <ul>
             <li>
-              <span>Publisher :</span> {props.task.publisher}
+              <span>Publisher :</span> {props.data.publisher}
             </li>
             <li>
-              <span>RecipeID :</span> {props.task.recipe_id}
+              <span>RecipeID :</span> {props.data.recipe_id}
             </li>
             <li>
-              <span>Social Rank :</span> {props.task.social_rank.toFixed(0)}
+              <span>Social Rank :</span> {props.data.social_rank.toFixed(0)}
             </li>
           </ul>
         </Content>
         <ButtonContainer>
-          <a href={props.task.source_url} target="_blank">
+          <a href={props.data.source_url} target="_blank">
             Read more
           </a>
         </ButtonContainer>

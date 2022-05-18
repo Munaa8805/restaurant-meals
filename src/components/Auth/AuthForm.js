@@ -3,14 +3,13 @@ import { useHistory } from "react-router-dom";
 import { AuthContainer, Section, Formdiv, Actiondiv } from "./AuthFormElements";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth-context";
-const AuthForm = () => {
+
+const AuthForm = (props) => {
   const [error, setError] = useState(null);
+  const authCtx = useContext(AuthContext);
   const history = useHistory();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
-  const authCtx = useContext(AuthContext);
-
-  console.log("authCtx", authCtx);
 
   const registerSubmit = (e) => {
     e.preventDefault();
@@ -20,14 +19,13 @@ const AuthForm = () => {
       setError("Something wrong!.");
       return;
     }
+
     if (!authCtx.isLogin) {
-      authCtx.useRegister(enteredEmail, enteredPassword);
+      props.onLogin(enteredEmail, enteredPassword);
     } else {
-      authCtx.login(enteredEmail, enteredPassword);
+      props.onRegister(enteredEmail, enteredPassword);
     }
 
-    // console.log("email", enteredEmail);
-    // console.log("password", enteredPassword);
     history.push("/");
   };
   const switchAuthModeHandler = () => {
