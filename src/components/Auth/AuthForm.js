@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { AuthContainer, Section, Formdiv, Actiondiv } from "./AuthFormElements";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth-context";
+import FirebaseAuthService from "../../FirebaseAuthService";
 
 const AuthForm = (props) => {
   const [error, setError] = useState(null);
@@ -11,7 +12,7 @@ const AuthForm = (props) => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
-  const registerSubmit = (e) => {
+  const registerSubmit = async (e) => {
     e.preventDefault();
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
@@ -19,14 +20,31 @@ const AuthForm = (props) => {
       setError("Something wrong!.");
       return;
     }
-
+    let userDetail;
     if (!authCtx.isLogin) {
-      props.onLogin(enteredEmail, enteredPassword);
+      try {
+        await FirebaseAuthService.loginUser(enteredEmail, enteredPassword).then(
+          (userCredential) => {
+            userDetail = userCredential.user;
+          }
+        );
+      } catch (error) {
+        setError(error.message);
+      }
     } else {
-      props.onRegister(enteredEmail, enteredPassword);
+      try {
+        await FirebaseAuthService.loginUser(enteredEmail, enteredPassword).then(
+          (userCredential) => {
+            userDetail = userCredential.user;
+          }
+        );
+      } catch (error) {
+        setError(error.message);
+      }
     }
-
-    history.push("/");
+    authCtx.setEmail(userDetail.email);
+    console.log("userDetail", userDetail.email);
+    history.push("/meals");
   };
   const switchAuthModeHandler = () => {
     authCtx.toggleIsloggin();

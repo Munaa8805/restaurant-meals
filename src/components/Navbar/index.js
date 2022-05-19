@@ -6,6 +6,7 @@ import { IconContext } from "react-icons/lib";
 
 import { LogoMain } from "../../data";
 import AuthContext from "../../context/auth-context";
+import FirebaseAuthService from "../../FirebaseAuthService";
 
 import {
   Nav,
@@ -24,10 +25,13 @@ import {
 const Navbar = ({ toggle }) => {
   const authCtx = useContext(AuthContext);
   const isLogin = authCtx.isLogin;
+  const isEmail = authCtx.email;
   const history = useHistory();
 
-  const logoutHandler = () => {
-    authCtx.logout();
+  const logoutHandler = async () => {
+    await FirebaseAuthService.logoutUser();
+    authCtx.setEmail(null);
+    authCtx.setIsLogin(false);
     history.push("/");
   };
 
@@ -58,63 +62,82 @@ const Navbar = ({ toggle }) => {
               <FaBars color="#e67e22" />
             </MobileIcon>
             <NavMenu>
-              <NavItem>
-                <NavLinks
-                  to="home"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-60}
-                >
-                  How it works
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="meals"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-60}
-                >
-                  Meals
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="testimonials"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-60}
-                >
-                  Testimonials
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="price"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-60}
-                >
-                  Price
-                </NavLinks>
-              </NavItem>
               {!isLogin && (
-                <NavBtn>
-                  <NavBtnLink to="/auth">Account</NavBtnLink>
-                </NavBtn>
+                <>
+                  <NavItem>
+                    <NavLinks
+                      to="home"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-60}
+                    >
+                      How it works
+                    </NavLinks>
+                  </NavItem>
+                  <NavItem>
+                    <NavLinks
+                      to="meals"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-60}
+                    >
+                      Meals
+                    </NavLinks>
+                  </NavItem>
+                  <NavItem>
+                    <NavLinks
+                      to="testimonials"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-60}
+                    >
+                      Testimonials
+                    </NavLinks>
+                  </NavItem>
+                  <NavItem>
+                    <NavLinks
+                      to="price"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-60}
+                    >
+                      Price
+                    </NavLinks>
+                  </NavItem>
+                  <NavBtn>
+                    <NavBtnLink to="/auth">Account</NavBtnLink>
+                  </NavBtn>
+                </>
               )}
               {isLogin && (
-                <NavBtn>
-                  <button onClick={logoutHandler}>Logout</button>
-                </NavBtn>
+                <>
+                  <NavItem>
+                    <NavLinks
+                      to="meals"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-60}
+                    >
+                      Meals
+                    </NavLinks>
+                  </NavItem>
+                  <NavBtn>
+                    <button>{"Email"}</button>
+                  </NavBtn>
+                  <NavBtn>
+                    <button onClick={logoutHandler}>Logout</button>
+                  </NavBtn>
+                </>
               )}
             </NavMenu>
           </NavbarContainer>
